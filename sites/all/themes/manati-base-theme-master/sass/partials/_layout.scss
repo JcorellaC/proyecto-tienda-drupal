@@ -1,0 +1,19 @@
+//
+// General layout rules
+//
+
+.main-content {
+  @include outer-container;
+}
+
+.main {
+  @include span-columns(9);
+}
+
+#sidebar-first{
+    display: none;
+}
+
+.recientes{
+    @include font-size(24);
+}

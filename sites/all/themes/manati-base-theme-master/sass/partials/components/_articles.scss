@@ -1,0 +1,43 @@
+.node-article {
+	@include span-columns(3 of 9);
+	@include omega(3n);
+	padding: 30px;
+    margin: 10px;
+    background-color: #aaffff;
+
+    h2 a{
+    	font-size: 20px;
+    	color: #B87FFF;
+    }
+    ul.inline .node-readmore{
+    	display: block;
+    }
+}
+
+.node-readmore {
+	border: solid 1px;
+	color: #B87FFF;
+	text-align: center;
+}
+
+.node-readmore a {
+	color: #B87FFF;
+
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
+}
+
+#sidebar-second {
+	@include span-columns(3);
+	border: solid 1px #B87FFF;
+	margin-top: 12px;
+	padding: 15px;
+}
+
+.recientes-title{
+	color: #B87FFF;
+	font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,51 @@
+.site-logo {
+  display: none;
+}
+
+#block-system-main-menu h2 {
+	display: none;
+}
+
+.header-content{
+	@include span-columns(12);
+	background-color: #aaffff;
+	height: 150px;
+}
+
+.menu li{
+	list-style: none;
+	display: inline-block;
+}
+
+#site-name {
+	 padding: 27px 0 5px 20px;
+}
+
+.menu .leaf {
+	@include font-size(16);
+	width: 100px;
+	height: 50px;
+	background-color: #fff;
+	padding-top: 15px;
+	margin: 0;
+
+	&:hover {
+		background-color: #aaffff;
+		color: white;
+	}
+}
+
+.leaf a.active {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #aaffff;
+
+    &:hover {
+		background-color: #aaffff;
+		color: white;
+		text-decoration: none;
+	}
+}
