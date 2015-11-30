@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Juicebox configuration feature.
+ */
+
+include_once 'juicebox_configuration.features.inc';

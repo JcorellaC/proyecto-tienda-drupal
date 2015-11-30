@@ -1,0 +1,17 @@
+name = Juicebox configuration
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = juicebox
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = juicebox_apply_markup_filter
+features[variable][] = juicebox_enable_cors
+features[variable][] = juicebox_js_scope
+features[variable][] = juicebox_multisize_large
+features[variable][] = juicebox_multisize_medium
+features[variable][] = juicebox_multisize_small
+features[variable][] = juicebox_translate_base_languagelist
+features[variable][] = juicebox_translate_interface
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][strongarm] = strongarm
