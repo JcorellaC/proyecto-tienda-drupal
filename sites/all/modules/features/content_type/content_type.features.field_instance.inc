@@ -10,6 +10,57 @@
 function content_type_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-image_banner-field_image'.
+  $field_instances['node-image_banner-field_image'] = array(
+    'bundle' => 'image_banner',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'flexslider_fields',
+        'settings' => array(
+          'caption' => 0,
+          'image_style' => 'flexslider_full',
+          'optionset' => 'flexslider_default_basic_carousel',
+        ),
+        'type' => 'flexslider',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'flexslider_full',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field_categorias'.
   $field_instances['node-product-field_categorias'] = array(
     'bundle' => 'product',
@@ -106,7 +157,7 @@ function content_type_field_default_field_instances() {
           'image_style' => 'large',
           'incompatible_file_action' => 'show_icon_and_link',
           'jlib_backgroundColor' => '#222222',
-          'jlib_galleryHeight' => '400px',
+          'jlib_galleryHeight' => '100%',
           'jlib_galleryWidth' => '100%',
           'jlib_showExpandButton' => 1,
           'jlib_showOpenButton' => 1,
@@ -126,37 +177,19 @@ function content_type_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'juicebox',
+        'module' => 'image',
         'settings' => array(
-          'apply_markup_filter' => 1,
-          'caption_source' => '',
-          'custom_parent_classes' => '',
+          'image_link' => '',
           'image_style' => 'large',
-          'incompatible_file_action' => 'show_icon_and_link',
-          'jlib_backgroundColor' => '#222222',
-          'jlib_galleryHeight' => '100%',
-          'jlib_galleryWidth' => '100%',
-          'jlib_showExpandButton' => 1,
-          'jlib_showOpenButton' => 1,
-          'jlib_showThumbsButton' => 1,
-          'jlib_textColor' => 'rgba(255,255,255,1)',
-          'jlib_thumbFrameColor' => 'rgba(255,255,255,.5)',
-          'jlib_useFullscreenExpand' => 0,
-          'jlib_useThumbDots' => 0,
-          'linkurl_source' => '',
-          'linkurl_target' => '_blank',
-          'manual_config' => '',
-          'thumb_style' => 'juicebox_square_thumbnail',
-          'title_source' => '',
         ),
-        'type' => 'juicebox_formatter',
+        'type' => 'image',
         'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image',
     'label' => 'image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -170,12 +203,12 @@ function content_type_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'plup',
       'settings' => array(
         'preview_image_style' => 'medium',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_plupload',
       'weight' => 9,
     ),
   );
@@ -330,6 +363,45 @@ function content_type_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-product-field_relacionados'.
+  $field_instances['node-product-field_relacionados'] = array(
+    'bundle' => 'product',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_relacionados',
+    'label' => 'Relacionados',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field_video'.
   $field_instances['node-product-field_video'] = array(
     'bundle' => 'product',
@@ -352,7 +424,7 @@ function content_type_field_default_field_instances() {
           'youtube_width' => NULL,
         ),
         'type' => 'youtube_video',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -382,6 +454,7 @@ function content_type_field_default_field_instances() {
   t('Fabricante');
   t('Nombre');
   t('Precio');
+  t('Relacionados');
   t('Video');
   t('image');
   t('rating');

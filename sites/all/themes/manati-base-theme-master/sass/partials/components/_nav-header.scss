@@ -1,51 +1,60 @@
-.site-logo {
-  display: none;
+.menu {
+  background-color: $nav-color;
+  padding: 20px 0;
+
+  @include span-columns(4);
+
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(10);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(12);
+  }
 }
 
-#block-system-main-menu h2 {
-	display: none;
+.leaf, .expanded {
+  @include span-columns(4);
+
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(2);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(2.33);
+  }
+
+  text-align: center;
+
+  a {
+    @include font-size(16);
+  }
 }
 
-.header-content{
-	@include span-columns(12);
-	background-color: #aaffff;
-	height: 150px;
-}
+.expanded {
+  height: 30px;
+  overflow: hidden;
+  transition: height .5s linear;
 
-.menu li{
-	list-style: none;
-	display: inline-block;
-}
-
-#site-name {
-	 padding: 27px 0 5px 20px;
-}
-
-.menu .leaf {
-	@include font-size(16);
-	width: 100px;
-	height: 50px;
-	background-color: #fff;
-	padding-top: 15px;
-	margin: 0;
-
-	&:hover {
-		background-color: #aaffff;
-		color: white;
-	}
-}
-
-.leaf a.active {
-    height: 100%;
-    display: inline-block;
-    width: 100%;
+  .menu {
     text-align: center;
-    font-weight: bold;
-    color: #aaffff;
+    width: 100%;
 
-    &:hover {
-		background-color: #aaffff;
-		color: white;
-		text-decoration: none;
-	}
+    .leaf {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.open {
+  height: 300px;
 }

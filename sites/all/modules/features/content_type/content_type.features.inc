@@ -18,6 +18,14 @@ function content_type_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function content_type_node_info() {
   $items = array(
+    'image_banner' => array(
+      'name' => t('Image banner'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'product' => array(
       'name' => t('Producto'),
       'base' => 'node_content',

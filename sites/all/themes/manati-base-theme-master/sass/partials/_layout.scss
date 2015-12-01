@@ -7,13 +7,47 @@
 }
 
 .main {
-  @include span-columns(9);
+  @include span-columns(4);
+
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(10);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(12);
+  }
 }
 
+//------HIDE UNNECESARY ITEMS--------------//
 #sidebar-first{
-    display: none;
+  display: none;
 }
 
-.recientes{
-    @include font-size(24);
+.site-logo {
+  display: none;
+}
+
+#site-name {
+  display: none;
+}
+
+.block-menu h2{
+  display: none;
+}
+
+.flexslider .views-label-field-image {
+  display: none;
+}
+
+.node-image-banner {
+  display: none;
+}
+//------------------------------------------//
+
+h2 {
+  @include font-size(28);
 }

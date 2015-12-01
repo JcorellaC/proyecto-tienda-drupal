@@ -2,20 +2,23 @@
 // Variables
 //
 
-// Sprite
-$sprite-image: "../images/global-sprite";
-
 // Typography
 @import "neat";
 
 // Colors
+$body-back: #333;
+$nav-color: #5DEC5F;
 
+$text-color: #f2f2f2;
+$title-color: #f2f2f2;
+$links-color: #367BD6;
 
 // Neat variables
 $max-width: 1200px;
 $grid-colums: 12;
 
 // Breakpoints
-$desktop: 1000px;
-$tablet: 700px;
-$mobile-large: 500px;
+
+$mobile: new-breakpoint(min-width 320px 8);
+$tablet: new-breakpoint(min-width 820px 10);
+$desktop: new-breakpoint(min-width 1000px 12);

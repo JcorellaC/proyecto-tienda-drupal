@@ -1,0 +1,17 @@
+#block-views-productos-relacionados-block {
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(10);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(12);
+  }
+
+  border: 1px solid $nav-color;
+  margin: 50px auto;
+  padding: 20px 2%;
+}
