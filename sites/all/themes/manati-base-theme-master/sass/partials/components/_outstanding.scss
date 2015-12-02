@@ -1,4 +1,4 @@
-#block-views-productos-relacionados-block {
+#block-views-productos-destacados-block {
   @include media ($mobile) {
     @include span-columns(8);
   }
@@ -14,4 +14,77 @@
   border: 1px solid $nav-color;
   margin: 50px auto;
   padding: 20px 2%;
+
+  h2 {
+    width: 100%;
+  }
+
+  .content {
+    @include media ($mobile) {
+      @include span-columns(8);
+    }
+
+    @include media ($tablet) {
+      @include span-columns(10);
+    }
+
+    @include media ($desktop) {
+      @include span-columns(12);
+    }
+  }
 }
+
+.item-list {
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(10);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(12);
+  }
+
+  li {
+    @include media ($mobile) {
+      @include span-columns(8);
+      @include omega();
+    }
+
+    @include media ($tablet) {
+      @include span-columns(2.5);
+      @include omega();
+    }
+
+    @include media ($desktop) {
+      @include span-columns(3);
+    }
+
+    @include font-size(18);
+    color: $text-color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

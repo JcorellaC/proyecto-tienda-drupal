@@ -1,0 +1,20 @@
+.view-mode-full {
+  @include media ($mobile) {
+    @include span-columns(8);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(10);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(12);
+  }
+
+  @include font-size(18);
+  color: $text-color;
+
+  div {
+    margin: 20px 0;
+  }
+}

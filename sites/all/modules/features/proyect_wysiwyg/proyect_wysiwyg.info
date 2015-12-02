@@ -1,0 +1,11 @@
+name = Wysiwyg
+description = Feacture configurado con wysiwyg
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = wysiwyg
+features[features_api][] = api:2
+features[filter][] = filtered_html
+features[wysiwyg][] = filtered_html

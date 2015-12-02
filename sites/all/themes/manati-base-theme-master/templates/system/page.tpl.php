@@ -19,12 +19,6 @@
   <?php endif; ?>
   <div class="header-content">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" class="site-logo" rel="home" id="logo">
-        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
-      </a>
-    <?php endif; ?>
-
     <?php if ($site_name || $site_slogan): ?>
 
         <?php if ($site_name): ?>

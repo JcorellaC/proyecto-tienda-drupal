@@ -1,0 +1,29 @@
+.node-teaser {
+  @include media ($mobile) {
+    @include span-columns(7);
+    @include shift(.25);
+  }
+
+  @include media ($tablet) {
+    @include span-columns(3.333);
+  }
+
+  @include media ($desktop) {
+    @include span-columns(3);
+  }
+
+  @include font-size(18);
+
+  border: 1px solid $nav-color;
+  color: $text-color;
+  margin: 50px auto;
+  padding: 20px 2%;
+
+  div {
+    margin: 10px 0;
+  }
+}
+
+#node-27, .node-promoted{
+  display: none;
+}

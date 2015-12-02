@@ -1,20 +1,29 @@
-.menu {
+.content .menu {
   background-color: $nav-color;
-  padding: 20px 0;
+  overflow: hidden;
+
 
   @include span-columns(4);
 
   @include media ($mobile) {
     @include span-columns(8);
+    height: 0;
+    padding: 0;
   }
 
   @include media ($tablet) {
     @include span-columns(10);
+    height: 50px;
+    padding: 10px 0;
   }
 
   @include media ($desktop) {
     @include span-columns(12);
   }
+}
+
+.leaf a, .expanded a {
+  color: $body-back;
 }
 
 .leaf, .expanded {
@@ -39,22 +48,45 @@
   }
 }
 
-.expanded {
-  height: 30px;
-  overflow: hidden;
-  transition: height .5s linear;
+.block-menu h2{
+  @include media ($mobile) {
+    @include span-columns(3);
+    @include shift(5);
 
-  .menu {
+    border: 1px solid $text-color;
+    margin-top: 20px !important;
+    padding: 10px;
     text-align: center;
-    width: 100%;
+  }
 
-    .leaf {
+  @include media ($tablet) {
+    display: none;
+  }
+
+  @include media ($desktop) {
+    display: none;
+  }
+}
+
+.expanded {
+  @include media ($mobile) {
+    height: 30px;
+    overflow: hidden;
+    transition: height .5s linear;
+
+    .menu {
       text-align: center;
       width: 100%;
+
+      .leaf {
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 }
 
 .open {
-  height: 300px;
+  height: 180px;
+  padding: 20px 0;
 }

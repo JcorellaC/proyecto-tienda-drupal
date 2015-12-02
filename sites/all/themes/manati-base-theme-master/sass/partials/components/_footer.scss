@@ -1,0 +1,12 @@
+.footer {
+  background-color: darken($body-back, 10%);
+  padding: 20px;
+}
+
+#block-views-copuright-block .field-content {
+  display: none;
+}
+
+#block-views-copuright-block h2 {
+  @include font-size(18);
+}
