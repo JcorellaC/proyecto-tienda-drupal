@@ -485,6 +485,8 @@ h2 {
       width: 100%; }
       .view-mode-full:last-child {
         margin-right: 0; } }
+  .view-mode-full input, .view-mode-full textarea {
+    color: #333; }
   .view-mode-full div {
     margin: 20px 0; }
 
